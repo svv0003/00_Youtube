@@ -18,7 +18,9 @@
 
       <div class="search-container">
         <input type="text" id="youtubeLink" placeholder="https://youtu.be/...">
-        <button onclick="embedVideo()">Search</button>
+        <button class="clearBtn" onclick="clearLink()">Clear</button>
+        <button class="searchBtn" onclick="embedVideo()">Search</button>
+        <button class="saveBtn" onclick="saveLink()">Save</button>
       </div>
 
       <div id="videoContainer" style="margin-top: 20px;">
