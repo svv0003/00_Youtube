@@ -11,7 +11,7 @@ $(function () {
   // input 포커스 아웃 시 placeholder 복원하기
   $("#youtubeLink").on("blur", function () {
     if (!$(this).val()) {
-      $(this).attr("placeholder", "https://youtu.be/...");
+      $(this).attr("placeholder", "Paste YouTube Link");
     }
   });
 
@@ -38,7 +38,8 @@ function embedVideo() {
   // 유효한 유튜브 링크인지 확인하기
   if (
     !inputLink.includes("youtu.be/") &&
-    !inputLink.includes("youtube.com/watch?v=")
+    !inputLink.includes("youtube.com/watch?v=") &&
+    !inputLink.includes("youtube.com/live/")
   ) {
     alert("올바른 주소를 입력하세오.");
     return;
@@ -53,9 +54,16 @@ function embedVideo() {
     const [id, params = ""] = urlParts.split("?");
     videoId = id;
     queryParams = params ? `?${params}` : "";
+
   } else if (inputLink.includes("youtube.com/watch?v=")) {
     const urlParts = inputLink.split("v=")[1];
     const [id, params = ""] = urlParts.split("&");
+    videoId = id;
+    queryParams = params ? `?${params}` : "";
+    
+  } else if (inputLink.includes("youtube.com/live/")) {
+    const urlParts = inputLink.split("youtube.com/live/")[1];
+    const [id, params = ""] = urlParts.split("?");
     videoId = id;
     queryParams = params ? `?${params}` : "";
   }
@@ -83,7 +91,7 @@ function embedVideo() {
 
   // videoContainer 맨 위에 삽입
   $("#videoContainer").prepend(videoHtml);
-  $input.removeClass("error-placeholder").val("").attr("placeholder", "https://youtu.be/...");  
+  $input.removeClass("error-placeholder").val("").attr("placeholder", "Paste YouTube Link");  
 }
 
 
@@ -92,7 +100,7 @@ function embedVideo() {
 // 입력한 링크 지우기
 function clearLink() {
   const $input = $("#youtubeLink");
-  $input.removeClass("error-placeholder").val("").attr("placeholder", "https://youtu.be/...");
+  $input.removeClass("error-placeholder").val("").attr("placeholder", "Paste YouTube Link");
 }
 
 
