@@ -94,7 +94,6 @@ button {
 .video-responsive {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 비율 */
-  height: 0;
   overflow: hidden;
   max-width: 100%;
   margin: 0 auto 10px auto;
@@ -111,19 +110,19 @@ button {
 
 .saved-video {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
   max-width: 100%;
   margin: 0 auto 10px auto;
-  border-radius: 2%;
 }
 
 .saved-video .video-wrapper {
   position: relative;
-  flex: 0 0 90%;        /* 동영상 너비 90% */
+  max-width: 100%;
+  flex: 1; /* 가능한 공간 채우기 */
   padding-bottom: 50.625%;  /* 16:9 비율 유지 (90% * 56.25%) */
-  height: 0;
   overflow: hidden;
+  border-radius: 2%;
 }
 
 .saved-video .video-wrapper iframe {
@@ -132,24 +131,28 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 2%;
 }
 
 .saved-video .delete-button {
-  flex: 0 0 10%;          
+  flex: 0 0 10%;
+  width: 100%;
   height: 100%;
-  background-color: #ff0000;
+  background-color: #ff8a8a;
   color: white;
-  border: none;
+  border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 0.9rem;
-  z-index: 10; /* iframe 뒤에 숨겨지지 않도록 */
+  z-index: 10;                /* iframe 뒤에 숨겨지지 않도록 */
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 25.3125% 0;
 }
+
+
 
 .saved-video .delete-button:hover {
   background-color: #cc0000;
@@ -159,6 +162,18 @@ button {
 /****************************
 에러 스타일
 ****************************/
+
+
+
+
+
+
+
+
+
+
+
+
 
 /****************************
 모바일 반응형 스타일
@@ -194,22 +209,7 @@ button {
     padding: 5%;
   }
 
-  .saved-video {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .saved-video .video-wrapper {
-    flex: none;
-    width: 100%;
-    padding-bottom: 56.25%; /* 모바일에서 원래 비율 복원 */
-  }
-
   .saved-video .delete-button {
-    width: 100%;
-    max-width: 100px;
-    padding: auto 10px;
-    margin-top: 5px;
-    text-align: center;
+    font-size: 0.7rem;
   }
 }
