@@ -1,3 +1,7 @@
+body {
+  background-color: #4e4e4e;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -14,6 +18,14 @@
 
 a {
   text-decoration: none;
+  text-align: center;
+  justify-items: center;
+}
+
+.home-btn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(200, 0, 87);  
 }
 
 #menu-btn {
@@ -27,4 +39,30 @@ a {
   cursor: pointer;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
+}
+
+
+
+.main-container {
+  justify-items: center;
+}
+
+.function-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  padding: 20px 50px;
+  max-width: 1300px;
+}
+
+.link-btn {
+  max-width: 300px;
+  background-color: aquamarine;
+  border: 2px solid #b7ffed;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.function-box {
+  font-size: bold;
 }
