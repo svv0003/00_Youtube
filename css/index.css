@@ -17,6 +17,10 @@ body {
 .nav-container .nav-right {
 }
 
+.main-container {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   text-align: center;
@@ -45,11 +49,14 @@ a {
   border-radius: 4px;
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
 
+#menu-btn:hover {
+  background-color:  rgb(170, 0, 87);
+  cursor: pointer;
+}
 
 
 
@@ -71,7 +78,7 @@ a {
   display: block;
   max-width: 300px;
   background-color: rgb(200, 255, 255);
-  border: 3px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   padding: 10px 20px;
   margin-bottom: 10px;
@@ -93,7 +100,13 @@ a {
 
 
 
+@media (max-width: 1080px) {
 
+  .function-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 
 
@@ -130,12 +143,11 @@ a {
     width: 220px;
     border-radius: 4px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   a {
     font-size: 0.85rem;
   }
-
 
 }
