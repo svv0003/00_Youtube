@@ -234,11 +234,11 @@
   }
 
   .saved-video .video-wrapper {
-    padding-bottom: 47.8125%;  /* 16:9 비율 유지 (90% * 56.25%) */
+    padding-bottom: 49.5%;  /* 16:9 비율 유지 (90% * 56.25%) */
   }
 
   .saved-video .delete-button {
-    flex: 0 0 15%;
+    flex: 0 0 12%;
     font-size: 0.7rem;
   }
 }
