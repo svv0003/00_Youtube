@@ -99,7 +99,7 @@ a {
 
 
 
-
+/*
 @media (max-width: 1080px) {
 
   .function-container {
@@ -107,13 +107,15 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+*/
 
 
-
-@media (max-width: 768px) {
+@media (max-width: 760px) {
 
   .nav-container{
     margin-bottom: 0px;
+    padding: 10px;
+    margin-bottom: 20px;
   }
 
   .home-btn img {
