@@ -34,11 +34,35 @@ a {
 }
 */
 
-.home-btn img {
+.home-btn {
+  position: relative;
+  display: inline-block;
+  width: 40px;   /* 아이콘 크기 */
+  height: 40px;
+}
+
+.home-btn .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 60px;
   height: 60px;
   vertical-align: middle;
+  transition: opacity 0.3s ease;
 }
+
+.home-btn .hover {
+  opacity: 0;
+}
+
+.home-btn:hover .default {
+  opacity: 0;
+}
+
+.home-btn:hover .hover {
+  opacity: 1;
+}
+
 
 #menu-btn {
   height: 40px;
@@ -108,10 +132,9 @@ a {
     margin-bottom: 0;
   }
 
-  .home-btn img {
+  .home-btn .icon {
     width: 50px;
     height: 50px;
-    vertical-align: middle;
   }
 
   #menu-btn {

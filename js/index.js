@@ -6,3 +6,14 @@ $(document).ready(function () {
         }
     });
 });
+
+
+const homeBtn = document.querySelector(".home-btn img");
+
+homeBtn.addEventListener("mouseover", () => {
+  homeBtn.src = "../img/home(2).svg";
+});
+
+homeBtn.addEventListener("mouseout", () => {
+  homeBtn.src = "../img/home(1).svg";
+});
