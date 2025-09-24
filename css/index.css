@@ -24,9 +24,7 @@ body {
 a {
   text-decoration: none;
   text-align: center;
-  justify-items: center;
 }
-
 
 /*
 .home-btn {
@@ -54,16 +52,8 @@ a {
 }
 
 #menu-btn:hover {
-  background-color:  rgb(170, 0, 87);
+  background-color: rgb(170, 0, 87);
   cursor: pointer;
-}
-
-
-
-
-.main-container {
-  justify-items: center;
-  text-align: center;
 }
 
 .function-container {
@@ -82,9 +72,8 @@ a {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   padding: 10px 20px;
-  margin-bottom: 10px;
-    text-align: center;
-  justify-items: center;
+  margin: 0 auto 10px; /* 중앙 정렬 및 하단 여백 */
+  text-align: center;
 }
 
 .function-box {
@@ -92,29 +81,8 @@ a {
   font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-/*
-@media (max-width: 1080px) {
-
-  .function-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-*/
-
-
 @media (max-width: 760px) {
-
-  .nav-container{
-    margin-bottom: 0px;
+  .nav-container {
     padding: 10px;
     margin-bottom: 20px;
   }
@@ -127,32 +95,31 @@ a {
 
   #menu-btn {
     height: 35px;
-    width: 55;
+    width: 55px;
   }
 
   .main-container {
-    justify-items: center;
     text-align: center;
   }
-
 
   .function-container {
     display: flex;
     flex-direction: column;
-    padding: 0 20%;
-    max-width: 90%;
+    align-items: center; /* 수평 중앙 정렬 */
+    padding: 20px;
+    max-width: 100%; /* 화면 너비를 꽉 채우도록 */
     margin: 0 auto;
   }
 
   .link-btn {
-    width: 220px;
-    border-radius: 4px;
+    width: 90%; /* 버튼 너비를 화면의 90%로 설정 */
+    max-width: 400px; /* 최대 너비 제한 */
+    margin: 0 auto 10px; /* 중앙 정렬 및 하단 여백 */
     padding: 10px;
-    margin-bottom: 5px;
+    border-radius: 4px;
   }
 
   a {
     font-size: 0.85rem;
   }
-
 }
