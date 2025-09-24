@@ -56,6 +56,11 @@ a {
   cursor: pointer;
 }
 
+.main-container {
+  justify-items: center;
+  text-align: center;
+}
+
 .function-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -72,14 +77,25 @@ a {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   padding: 10px 20px;
-  margin: 0 auto 10px; /* 중앙 정렬 및 하단 여백 */
+  margin-bottom: 10px;
   text-align: center;
+  justify-items: center;
 }
 
 .function-box {
   color: black;
   font-weight: bold;
 }
+
+/*
+@media (max-width: 1080px) {
+
+  .function-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+*/
 
 @media (max-width: 760px) {
   .nav-container {
@@ -95,26 +111,22 @@ a {
 
   #menu-btn {
     height: 35px;
-    width: 55px;
-  }
-
-  .main-container {
-    text-align: center;
+    width: 65px;
   }
 
   .function-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 수평 중앙 정렬 */
+    max-width: 100%;
     padding: 20px;
-    max-width: 100%; /* 화면 너비를 꽉 채우도록 */
     margin: 0 auto;
+    align-items: center;
   }
 
   .link-btn {
-    width: 90%; /* 버튼 너비를 화면의 90%로 설정 */
-    max-width: 400px; /* 최대 너비 제한 */
-    margin: 0 auto 10px; /* 중앙 정렬 및 하단 여백 */
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto 10px;
     padding: 10px;
     border-radius: 4px;
   }
