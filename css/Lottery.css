@@ -107,17 +107,17 @@
   /* 회차 셀 스타일 */
   .count-cell {
     color: rgb(255, 255, 255);
-    width: 40px;                        /* 회차 셀은 조금 더 넓게 */
+    width: 14vw;                        /* 회차 셀은 조금 더 넓게 */
     font-size: 0.8rem;
   }
 
   .number-cell {
     font-size: 0.8rem;
     width: 8vw;                         /* 뷰포트 너비의 8%로 비율 유지 */
-    height: 7.5vw;                        /* width와 동일하여 원형 유지 */
-    line-height: 7.5vw;                   /* 수직 중앙 정렬 */
+    height: 8vw;                        /* width와 동일하여 원형 유지 */
+    line-height: 8vw;                   /* 수직 중앙 정렬 */
     border-radius: 50%;                 /* 원형 유지 */
-    min-width: 30px;                    /* 최소 크기 보장 */
+    min-width: 36px;                    /* 최소 크기 보장 */
     min-height: 30px;                   /* 최소 크기 보장 */
   }
 }
