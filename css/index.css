@@ -1,3 +1,7 @@
+/****************************
+배경, 폰트 스타일
+****************************/
+
 body {
   background-color: #4e4e4e;
 }
@@ -17,8 +21,16 @@ body {
 .nav-container .nav-right {
 }
 
+
 .main-container {
   text-align: center;
+}
+
+.words {
+  color: rgb(255, 0, 111);
+  font-size: 2.7rem;
+  font-weight: bold;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
 a {
@@ -127,6 +139,16 @@ a {
 */
 
 @media (max-width: 760px) {
+
+  .main-container {
+    padding: 10px 0;
+  }
+
+  .words {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
   .nav-container {
     padding: 10px;
     margin-bottom: 0;

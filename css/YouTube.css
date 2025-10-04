@@ -1,15 +1,4 @@
 /****************************
-배경, 폰트 스타일
-****************************/
-
-.words {
-  color: rgb(255, 0, 111);
-  font-size: 2.7rem;
-  font-weight: bold;
-  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
-}
-
-/****************************
 검색 스타일
 ****************************/
 
@@ -46,7 +35,6 @@
   color: #ffffff;
 }
 
-
 .clearBtn {
   width: 80px;
   height: 40px;
@@ -55,11 +43,12 @@
   border: 1px solid #ffffff;
   border-left: none;
   border-radius: 0;
-  padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   transition: background-color 0.3s ease;
   font-size: 0.9rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .searchBtn {
@@ -70,11 +59,12 @@
   border: 1px solid #ffffff;
   border-left: none;
   border-radius: 0;
-  padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   transition: background-color 0.3s ease;
   font-size: 0.9rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .saveBtn {
@@ -85,11 +75,12 @@
   border: 1px solid #ffffff;
   border-left: none;
   border-radius: 0 4px 4px 0;
-  padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   transition: background-color 0.3s ease;
   font-size: 0.9rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .clearBtn:hover {
@@ -99,10 +90,9 @@
 
 .searchBtn:hover,
 .saveBtn:hover {
-  background-color:  rgb(170, 0, 87);
+  background-color: rgb(170, 0, 87);
   cursor: pointer;
 }
-
 
 /****************************
 영상 스타일
@@ -142,7 +132,7 @@
   position: relative;
   max-width: 100%;
   flex: 1; /* 가능한 공간 채우기 */
-  padding-bottom: 50.625%;  /* 16:9 비율 유지 (90% * 56.25%) */
+  padding-bottom: 50.625%; /* 16:9 비율 유지 (90% * 56.25%) */
   overflow: hidden;
   border-radius: 2%;
 }
@@ -166,7 +156,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 0.9rem;
-  z-index: 10;                /* iframe 뒤에 숨겨지지 않도록 */
+  z-index: 10; /* iframe 뒤에 숨겨지지 않도록 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,43 +164,19 @@
   padding: 25.3125% 0;
 }
 
-
-
 .saved-video .delete-button:hover {
   background-color: rgb(170, 0, 87);
 }
 
-
 /****************************
 에러 스타일
 ****************************/
-
-
-
-
-
-
-
-
-
-
-
-
 
 /****************************
 모바일 반응형 스타일
 ****************************/
 
 @media (max-width: 760px) {
-  .main-container {
-    padding: 10px 0;
-  }
-
-  .words {
-    font-size: 1.7rem;
-    margin-bottom: 30px;
-  }
-
   .search-container {
     max-width: 80%;
     margin: 40px auto 30px auto;
@@ -225,7 +191,6 @@
   .clearBtn,
   .searchBtn,
   .saveBtn {
-    padding: 0 7px;
     font-size: 0.7rem;
   }
 
@@ -234,7 +199,7 @@
   }
 
   .saved-video .video-wrapper {
-    padding-bottom: 49.5%;  /* 16:9 비율 유지 (90% * 56.25%) */
+    padding-bottom: 49.5%; /* 16:9 비율 유지 (90% * 56.25%) */
   }
 
   .saved-video .delete-button {

@@ -1,0 +1,118 @@
+/****************************
+검색 스타일
+****************************/
+
+.createBtn,
+.deleteBtn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(200, 0, 87);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.createBtn:hover,
+.deleteBtn:hover {
+  background-color:  rgb(170, 0, 87);
+  cursor: pointer;
+}
+
+
+
+/****************************
+결과 스타일
+****************************/
+
+.lottery-container {
+  text-align: center;
+}
+
+/* 테이블 스타일 */
+#lottoResult {
+  border-collapse: separate;          /* 셀 간격을 위해 separate 사용 */
+  border-spacing: 8px 10px;           /* 열 간격 8px, 행 간격 10px */
+  width: 100%;
+  max-width: 500px;                   /* 데스크톱 기준 최대 500px */
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* 기본 셀 스타일 */
+#lottoResult td {
+  border: none;                       /* 테두리 제거 */
+  text-align: center;
+}
+
+/* 회차 셀 스타일 */
+.count-cell {
+  color: rgb(255, 255, 255);
+  width: 80px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* 번호 셀 스타일 */
+.number-cell {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  width: 50px;                         /* 정확한 원형을 위해 width와 height 동일 */
+  height: 50px;                        /* 정확한 원형을 위해 width와 height 동일 */
+  line-height: 50px;                   /* 수직 중앙 정렬 */
+  border-radius: 50%;                   /* 원형 유지 */
+}
+
+/* 강조 번호 셀 스타일 (원형, 배경색, 글자색) */
+.number-cell.highlight {
+  background-color: rgb(200, 0, 87);  /* 배경색: 금색 */
+  color: #ffffff;                     /* 글자색: 검정색 */
+  border-radius: 50%;                   /* 원형 모양 */
+}
+
+/* 배경색 제거 */
+#lottoResult tr {
+  background-color: transparent;        /* 배경색 투명 */
+}
+
+
+
+
+
+@media (max-width: 760px) {
+
+
+  .createBtn,
+  .deleteBtn {
+    font-size: 0.9rem;
+  }
+
+  #lottoResult {
+    max-width: 100%;
+    border-spacing: 3px 8px;            /* 모바일: 열 간격 3px, 행 간격 8px */
+    margin: 10px auto;
+    font-size: 0.8rem;
+  }
+
+  /* 회차 셀 스타일 */
+  .count-cell {
+    color: rgb(255, 255, 255);
+    width: 40px;                        /* 회차 셀은 조금 더 넓게 */
+    font-size: 0.8rem;
+  }
+
+  .number-cell {
+    font-size: 0.8rem;
+    width: 8vw;                         /* 뷰포트 너비의 8%로 비율 유지 */
+    height: 8vw;                        /* width와 동일하여 원형 유지 */
+    line-height: 8vw;                   /* 수직 중앙 정렬 */
+    border-radius: 50%;                 /* 원형 유지 */
+    min-width: 30px;                    /* 최소 크기 보장 */
+    min-height: 30px;                   /* 최소 크기 보장 */
+  }
+}
