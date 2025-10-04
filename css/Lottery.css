@@ -113,7 +113,7 @@
 
   .number-cell {
     font-size: 0.8rem;
-    width: 8vw;                         /* 뷰포트 너비의 8%로 비율 유지 */
+    width: 8.2vw;                         /* 뷰포트 너비의 8%로 비율 유지 */
     height: 8vw;                        /* width와 동일하여 원형 유지 */
     line-height: 8vw;                   /* 수직 중앙 정렬 */
     border-radius: 50%;                 /* 원형 유지 */
